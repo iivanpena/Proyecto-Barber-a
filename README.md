@@ -19,7 +19,7 @@ Google Calendar API: Gestión de agenda en tiempo real.
 ## 📂 Estructura del proyecto
 index.html: Página principal orientada al cliente.
 
-admin.html: Panel privado para que el barbero vea sus citas.
+admin.html: Panel privado para que el barbero vea sus citas. (futuro)
 
 /cortes: Carpeta donde se gestionan las imágenes de los trabajos.
 
