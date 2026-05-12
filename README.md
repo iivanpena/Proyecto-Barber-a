@@ -3,7 +3,7 @@
 Web profesional para la barbería "Leolannbarberr" ubicada en Portomeiro. El objetivo es automatizar las reservas y mostrar el portafolio de cortes.
 
 ## 🚀 Funcionalidades
-Sistema de Citas: Integración con Google Calendar Appointments.
+Sistema de Citas: Integración con Google Calendar.
 
 Galería Dinámica: Visualización de trabajos recientes.
 
