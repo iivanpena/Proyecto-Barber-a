@@ -38,6 +38,7 @@
 
         footer { text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #333; color: #888; }
     </style>
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 </head>
 <body>
 
@@ -80,18 +81,14 @@
         <h2 style="color: #c5a059; margin-top: 0;">¿Cómo reservar?</h2>
         <p style="color: #fff; font-size: 0.95em; text-align: left; max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.8;">
             1. Haz clic en el botón dorado de abajo.<br>
-            2. Selecciona la fecha y hora que mejor te venga.<br>
-            3. Rellena tu Nombre y Apellido.<br>
-            4. En <strong>Correo electrónico</strong>: Puedes poner lo que quieras, es necesario algo con (@gmail.com).<br>
-            5. En <strong>Número de teléfono</strong>: Escribe tu número de teléfono.
+            2. Se abrirá una ventana flotante sin salir de la web.<br>
+            3. Selecciona la fecha y hora que mejor te venga.<br>
+            4. Rellena tu Nombre y Apellido.<br>
+            5. En <strong>Correo electrónico</strong>: Puedes poner lo que quieras, es necesario algo con (@gmail.com).<br>
+            6. En <strong>Número de teléfono</strong>: Escribe tu número de teléfono.
         </p>
 
-        <!-- Botón nativo optimizado con la nueva dirección de Google Calendar sustituida -->
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Ob2LwH76nEeFSey3fVn6Y4Jic7-yd7Khl9C34C2WLbJGy01GwBUN5-ceOFXJ1u9EusuxJp_NU?gv=true" 
-           target="_blank" 
-           class="btn btn-reserva">
-           RESERVAR CITA
-        </a>
+        <button id="boton-pop-up" class="btn btn-reserva">RESERVAR CITA</button>
     </div>
 
     <section class="card" style="text-align: center;">
@@ -108,7 +105,22 @@
     <p>Diseñado por leolan_ & iivanpena_ © 2026</p>
 </footer>
 
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
 <script>
+    // --- LÓGICA DEL POP-UP DE GOOGLE CALENDAR ---
+    const elBoton = document.getElementById('boton-pop-up');
+    
+    elBoton.addEventListener('click', function() {
+        // Ejecuta el pop-up oficial usando tu nueva URL asignada
+        calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Ob2LwH76nEeFSey3fVn6Y4Jic7-yd7Khl9C34C2WLbJGy01GwBUN5-ceOFXJ1u9EusuxJp_NU?gv=true',
+            color: '#c5a059',
+            label: 'Reservar una cita',
+            target: elBoton
+        });
+    });
+
     // --- CONFIGURACIÓN DE LA GALERÍA ---
     const totalFotosDisponibles = 5; 
 
