@@ -34,6 +34,8 @@
         
         footer { text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #333; color: #888; }
     </style>
+    <!-- CSS de Google Calendar en el Head -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 </head>
 <body>
 
@@ -74,17 +76,14 @@
 
     <div id="reservar" style="background: #252525; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; border-left: 6px solid #c5a059;">
         <h2 style="color: #c5a059; margin-top: 0;">¿Cómo reservar?</h2>
-        <p style="color: #fff; font-size: 0.95em;">
+        <p style="color: #fff; font-size: 0.95em; text-align: left; max-width: 500px; margin: 0 auto 1.5rem auto; line-height: 1.8;">
             1. Selecciona la fecha y hora que mejor te venga.<br>
             2. Rellena tu Nombre y Apellido.<br>
             3. En <strong>Correo electrónico</strong>: Puedes poner lo que quieras, es necesario algo con (@gmail.com).<br>
             4. En <strong>Número de teléfono</strong>: Escribe tu número de teléfono.
         </p>
-    </div>
 
-    <section style="text-align: center; margin: 3rem 0;">
-        <p style="font-size: 0.9em; color: #aaa; margin-bottom: 1rem;">Reserva tu cita online ahora mismo:</p>
-        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <!-- Botón Oficial de Google Calendar integrado en la tarjeta de reserva -->
         <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
         <script>
         (function() {
@@ -99,7 +98,7 @@
           });
         })();
         </script>
-    </section>
+    </div>
 
     <section class="card" style="text-align: center;">
         <h2 style="color: #c5a059; margin-top: 0;">Síguenos en Redes</h2>
@@ -117,17 +116,14 @@
 
 <script>
     // --- CONFIGURACIÓN DE LA GALERÍA ---
-    // Cambia este número por la cantidad real de fotos que tengas en la carpeta /cortes
     const totalFotosDisponibles = 5; 
 
     function generarGaleria() {
         const contenedor = document.getElementById('galeria-dinamica');
         if (!contenedor) return;
 
-        contenedor.innerHTML = ""; // Limpiar mensaje de carga
+        contenedor.innerHTML = ""; 
         let elegidas = [];
-
-        // Si hay menos de 3 fotos, mostrar solo las que haya
         const fotosAMostrar = Math.min(3, totalFotosDisponibles);
 
         while (elegidas.length < fotosAMostrar) {
@@ -136,11 +132,9 @@
                 elegidas.push(num);
                 
                 const img = document.createElement('img');
-                // IMPORTANTE: Busca archivos llamados corte1.jpg, corte2.jpg... dentro de la carpeta /cortes
                 img.src = `cortes/corte${num}.jpg`; 
                 img.alt = `Corte de pelo profesional ${num}`;
                 
-                // Si la imagen no existe o falla el nombre, no muestra un cuadro roto
                 img.onerror = function() { this.style.display = 'none'; };
                 
                 contenedor.appendChild(img);
@@ -148,7 +142,6 @@
         }
     }
 
-    // Ejecutar al cargar la página
     window.addEventListener('load', generarGaleria);
 </script>
 
