@@ -23,4 +23,4 @@ admin.html: Panel privado para que el barbero vea sus citas. (Futuro)
 
 /cortes: Carpeta donde se gestionan las imágenes de los trabajos.
 
-# Para poder ver la Página Web actual con escribir en el navegador http://turbocleaan.es , pulsar avanzado y avanzar de todos modos ya es suficiente
+# Para poder ver la Página Web actual con escribir en el navegador http://turbocleaan.es ya es suficiente o pulsando en el enlace
