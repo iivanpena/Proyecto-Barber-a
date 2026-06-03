@@ -11,7 +11,6 @@
         .login-box { background: var(--gris); padding: 2rem; border-radius: 12px; border-top: 4px solid var(--oro); text-align: center; width: 90%; max-width: 350px; }
         h2 { color: var(--oro); margin-bottom: 1.5rem; }
         
-        /* Estilo del cuadro de texto para que oculte las letras con puntitos de forma clara */
         input[type="password"] { 
             width: 100%; 
             padding: 12px; 
@@ -67,7 +66,7 @@
             const input = document.getElementById('pass-input').value;
             const errorText = document.getElementById('error-text');
             
-            // Convierte lo que escribe el usuario a Base64 básico nativo
+      
             const textoCodificado = btoa(input);
             
             // "YWJjMTIzLg==" representa la contraseña "abc123." de manera oculta en el código
@@ -89,8 +88,6 @@
             document.getElementById('login-screen').style.display = 'block';
             document.body.style.alignItems = 'center';
         }
-
-        // Ejecutar al pulsar la tecla Enter
         document.getElementById('pass-input').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 verificarPassword();
