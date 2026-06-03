@@ -39,15 +39,16 @@ Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr*
 │   ├── corte2.jpg
 │   └── ...
 └── README.md           # Documentación técnica del proyecto
-
-🔐 Nota de Seguridad sobre el Panel Admin
+```
+## 🔐 Nota de Seguridad sobre el Panel Admin
 Para cumplir con las limitaciones de un servidor estático (sin servidor Backend ni bases de datos), la seguridad del acceso se gestiona mediante hashing unidireccional.
 
 Cuando el administrador introduce la clave, JavaScript la procesa dinámicamente y compara el resultado con la "huella digital" almacenada en el código. De este modo, aunque un usuario inspeccione el código fuente con la tecla F12, la contraseña real es invisible e imposible de descifrar de forma inversa, cumpliendo con los estándares de seguridad web recomendados para entornos estáticos.
 
-🌐 Despliegue y Acceso
+## 🌐 Despliegue y Acceso
 El proyecto se encuentra totalmente operativo y desplegado en producción bajo un dominio personalizado.
 
 Sitio del Cliente: turbocleaan.es
 
 Panel de Gestión: turbocleaan.es/admin
+
