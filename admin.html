@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Leolannbarberr</title>
+    <style>
+        :root { --oro: #c5a059; --negro: #1a1a1a; --gris: #252525; }
+        body { font-family: Arial, sans-serif; margin: 0; background-color: var(--negro); color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        
+        .login-box { background: var(--gris); padding: 2rem; border-radius: 12px; border-top: 4px solid var(--oro); text-align: center; width: 90%; max-width: 350px; }
+        h2 { color: var(--oro); margin-bottom: 1.5rem; }
+        
+        /* Estilo del cuadro de texto para que oculte las letras con puntitos de forma clara */
+        input[type="password"] { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 1.5rem; 
+            border-radius: 6px; 
+            border: 1px solid #444; 
+            background: #111; 
+            color: #fff; 
+            box-sizing: border-box; 
+            font-size: 1.2rem; 
+            letter-spacing: 3px; /* Separa los puntitos para que se vea más estético */
+        }
+        input[type="password"]:focus { border-color: var(--oro); outline: none; }
+        
+        .btn { width: 100%; padding: 12px; background: var(--oro); color: black; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .btn-logout { background: #ff6b6b; color: white; width: auto; padding: 8px 15px; font-size: 0.85rem; border: none; border-radius: 4px; cursor: pointer; }
+        
+        .error-msg { color: #ff6b6b; margin-top: 1rem; display: none; }
+
+        /* Contenedor del calendario oculto */
+        #panel-privado { display: none; width: 100%; max-width: 1000px; padding: 2rem; box-sizing: border-box; text-align: center; }
+        .header-panel { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--oro); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+        
+        .iframe-container { position: relative; overflow: hidden; width: 100%; padding-top: 60%; border: 2px solid var(--oro); border-radius: 8px; background: white; }
+        .iframe-container iframe { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen" class="login-box">
+        <h2>🔒 Acceso Barbería</h2>
+        <input type="password" id="pass-input" placeholder="••••••••" autofocus>
+        <button class="btn" onclick="verificarPassword()">Entrar</button>
+        <p id="error-text" class="error-msg">❌ Contraseña incorrecta.</p>
+    </div>
+
+    <div id="panel-privado">
+        <div class="header-panel">
+            <div style="text-align: left;">
+                <h1 style="color: var(--oro); margin: 0;">AGENDA DE CITAS</h1>
+                <p style="color: #aaa; margin: 5px 0 0 0;">Gestión en tiempo real</p>
+            </div>
+            <button class="btn btn-logout" onclick="cerrarSesion()">🔒 Cerrar Sesión</button>
+        </div>
+        
+        <div class="iframe-container">
+            <iframe src="https://calendar.google.com/calendar/embed?src=tu_correo_o_id_calendario%40gmail.com&ctz=Europe%2FMadrid&wkst=2" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function verificarPassword() {
+            const input = document.getElementById('pass-input').value;
+            const errorText = document.getElementById('error-text');
+            
+            // Convierte lo que escribe el usuario a Base64 básico nativo
+            const textoCodificado = btoa(input);
+            
+            // "YWJjMTIzLg==" representa la contraseña "abc123." de manera oculta en el código
+            if (textoCodificado === "YWJjMTIzLg==") {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('panel-privado').style.display = 'block';
+                document.body.style.alignItems = 'flex-start';
+                errorText.style.display = 'none';
+            } else {
+                errorText.style.display = 'block';
+                document.getElementById('pass-input').value = "";
+                document.getElementById('pass-input').focus();
+            }
+        }
+
+        function cerrarSesion() {
+            document.getElementById('pass-input').value = "";
+            document.getElementById('panel-privado').style.display = 'none';
+            document.getElementById('login-screen').style.display = 'block';
+            document.body.style.alignItems = 'center';
+        }
+
+        // Ejecutar al pulsar la tecla Enter
+        document.getElementById('pass-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                verificarPassword();
+            }
+        });
+    </script>
+</body>
+</html>
