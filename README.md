@@ -1,10 +1,5 @@
 # 💈 Leolan Barber — Sistema de Gestión de Citas
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Google Calendar](https://img.shields.io/badge/Google_Calendar-4285F4?style=for-the-badge&logo=google-calendar&logoColor=white)
-
 ## Descripción
 Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr** ubicada en Portomeiro. Este proyecto nace con el objetivo de digitalizar el negocio, automatizar el flujo de reservas de los clientes y exhibir un portafolio dinámico de los trabajos realizados, eliminando la necesidad de gestión manual por parte del barbero.
 
