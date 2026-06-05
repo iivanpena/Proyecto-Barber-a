@@ -12,10 +12,10 @@ Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr*
 
 ## Funcionalidades Clave
 
-* **📅 Pasarela de Citas Oficial:** Integración directa con el sistema de programación de *Google Calendar Appointment Scheduling*. Permite a los clientes reservar su hora mediante un pop-up flotante estilizado, integrado nativamente y sin salir de la web.
-* **🖼️ Galería Dinámica Inteligente:** Sistema de carga aleatoria mediante JavaScript que selecciona y muestra automáticamente trabajos recientes desde el almacenamiento local, optimizando la experiencia visual en cada visita.
-* **📱 Diseño Premium Responsive:** Interfaz de usuario adaptada con una estética oscura y dorada (*premium black & gold*), optimizada específicamente para una navegación fluida en dispositivos móviles.
-* **🔒 Panel de Control Encriptado (Seguridad del Lado del Cliente):** Pantalla de login privada para la gestión de la agenda en tiempo real. Utiliza un sistema de autenticación basado en el hashing de la contraseña, impidiendo que la clave real pueda ser descubierta leyendo el código fuente.
+* **Pasarela de Citas Oficial:** Integración directa con el sistema de programación de *Google Calendar Appointment Scheduling*. Permite a los clientes reservar su hora mediante un pop-up flotante estilizado, integrado nativamente y sin salir de la web.
+* **Galería Dinámica Inteligente:** Sistema de carga aleatoria mediante JavaScript que selecciona y muestra automáticamente trabajos recientes desde el almacenamiento local, optimizando la experiencia visual en cada visita.
+* **Diseño Premium Responsive:** Interfaz de usuario adaptada con una estética oscura y dorada (*premium black & gold*), optimizada específicamente para una navegación fluida en dispositivos móviles.
+* **Panel de Control Encriptado (Seguridad del Lado del Cliente):** Pantalla de login privada para la gestión de la agenda en tiempo real. Utiliza un sistema de autenticación basado en el hashing de la contraseña, impidiendo que la clave real pueda ser descubierta leyendo el código fuente.
 
 ---
 
