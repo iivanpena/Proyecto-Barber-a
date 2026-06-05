@@ -46,3 +46,29 @@ El proyecto se encuentra totalmente operativo y desplegado en producción bajo u
 Sitio del Cliente: https://turbocleaan.es
 
 Panel de Gestión: https://turbocleaan.es/admin  (**contraseña abc123.**)
+## Despregamento en local con Docker (Para Desenvolvedores)
+
+Se es un desenvolvedor e queres testear esta web en local ou facer novas achegas, podes despregala rapidamente usando Docker sen necesidade de instalar ningún servidor web.
+
+### Requisitos previos
+* Ter instalado **Docker** no teu sistema (Docker Desktop en Windows ou docker.io en Linux).
+
+### Pasos para o despregamento:
+
+1. **Construír a imaxe de Docker:**
+   Abre a terminal na carpeta raíz do proxecto e executa o seguinte comando para crear a imaxe da web:
+   ```bash
+   docker build -t barberia-leolan:latest .
+Arrincar o contedor:
+Una vez creada a imaxe, executa este comando para levantar o servidor en local:
+
+Bash
+docker run -d -p 8080:80 --name web-barberia barberia-leolan:latest
+Probar a web:
+Abre o teu navegador e entra en http://localhost:8080. Xa poderás ver e testear a web da barbería correndo no teu propio PC.
+
+Deter o servidor:
+Cando remates de facer probas, podes parar o contedor con:
+
+Bash
+docker stop web-barberia
