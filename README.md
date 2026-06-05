@@ -5,12 +5,12 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Google Calendar](https://img.shields.io/badge/Google_Calendar-4285F4?style=for-the-badge&logo=google-calendar&logoColor=white)
 
-## 📝 Descripción
+## Descripción
 Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr** ubicada en Portomeiro. Este proyecto nace con el objetivo de digitalizar el negocio, automatizar el flujo de reservas de los clientes y exhibir un portafolio dinámico de los trabajos realizados, eliminando la necesidad de gestión manual por parte del barbero.
 
 ---
 
-## 🚀 Funcionalidades Clave
+## Funcionalidades Clave
 
 * **📅 Pasarela de Citas Oficial:** Integración directa con el sistema de programación de *Google Calendar Appointment Scheduling*. Permite a los clientes reservar su hora mediante un pop-up flotante estilizado, integrado nativamente y sin salir de la web.
 * **🖼️ Galería Dinámica Inteligente:** Sistema de carga aleatoria mediante JavaScript que selecciona y muestra automáticamente trabajos recientes desde el almacenamiento local, optimizando la experiencia visual en cada visita.
@@ -19,7 +19,7 @@ Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr*
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **HTML5 & CSS3 Semántico:** Estructuración limpia del documento junto con el uso de Variables CSS (`:root`) para una gestión de diseño ágil y escalable.
 * **JavaScript Asíncrono (Vanilla JS):** Manipulación del DOM para la galería, control de fallos en imágenes y uso de la API nativa de criptografía del navegador.
@@ -29,7 +29,7 @@ Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr*
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 ├── index.html          # Sitio web principal de cara al cliente (Reservas y Portafolio)
@@ -40,12 +40,12 @@ Sitio web profesional y responsivo diseñado para la barbería **Leolannbarberr*
 │   └── ...
 └── README.md           # Documentación técnica del proyecto
 ```
-## 🔐 Nota de Seguridad sobre el Panel Admin
+## Nota de Seguridad sobre el Panel Admin
 Para cumplir con las limitaciones de un servidor estático (sin servidor Backend ni bases de datos), la seguridad del acceso se gestiona mediante hashing unidireccional.
 
-Cuando el administrador introduce la clave, JavaScript la procesa dinámicamente y compara el resultado con la "huella digital" almacenada en el código. De este modo, aunque un usuario inspeccione el código fuente con la tecla F12, la contraseña real es invisible e imposible de descifrar de forma inversa, cumpliendo con los estándares de seguridad web recomendados para entornos estáticos.
+Cuando el administrador introduce la clave, JavaScript la procesa dinámicamente y compara el resultado con la "huella digital" almacenada en el código. De este modo, aunque un usuario inspeccione el código fuente con la tecla F12, la contraseña real es invisible por lo que un usuario normal no podría ver la contraseña desde esa única pestaña.
 
-## 🌐 Despliegue y Acceso
+## Despliegue y Acceso
 El proyecto se encuentra totalmente operativo y desplegado en producción bajo un dominio personalizado.
 
 Sitio del Cliente: turbocleaan.es
