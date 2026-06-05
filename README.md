@@ -43,7 +43,7 @@ Cuando el administrador introduce la clave, JavaScript la procesa dinámicamente
 ## Despliegue y Acceso
 El proyecto se encuentra totalmente operativo y desplegado en producción bajo un dominio personalizado.
 
-Sitio del Cliente: turbocleaan.es
+Sitio del Cliente: https://turbocleaan.es
 
-Panel de Gestión: turbocleaan.es/admin
+Panel de Gestión: HTTPS://turbocleaan.es/admin
 
