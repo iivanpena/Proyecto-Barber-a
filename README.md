@@ -45,5 +45,4 @@ El proyecto se encuentra totalmente operativo y desplegado en producción bajo u
 
 Sitio del Cliente: https://turbocleaan.es
 
-Panel de Gestión: https://turbocleaan.es/admin  (**contraseña abc123.)
-**
+Panel de Gestión: https://turbocleaan.es/admin  (**contraseña abc123.**)
