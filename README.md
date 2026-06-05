@@ -46,29 +46,29 @@ El proyecto se encuentra totalmente operativo y desplegado en producción bajo u
 Sitio del Cliente: https://turbocleaan.es
 
 Panel de Gestión: https://turbocleaan.es/admin  (**contraseña abc123.**)
-## Despregamento en local con Docker (Para Desenvolvedores)
+## Despliegue en Local con Docker (Para Desarrolladores)
 
-Se es un desenvolvedor e queres testear esta web en local ou facer novas achegas, podes despregala rapidamente usando Docker sen necesidade de instalar ningún servidor web.
+Para los desarrolladores que deseen testear este sitio web en un entorno local, realizar pruebas de compatibilidad o proponer nuevas contribuciones, se ha preparado una receta de despliegue automatizada utilizando contenedores Docker. Esto permite levantar el servidor web de forma inmediata sin necesidad de configurar servicios adicionales en el sistema operativo anfitrión.
 
-### Requisitos previos
-* Ter instalado **Docker** no teu sistema (Docker Desktop en Windows ou docker.io en Linux).
+### Requisitos Previos
+* Tener instalado **Docker Studio / Docker Desktop** en Windows o el paquete `docker.io` si se trabaja en entornos Linux.
 
-### Pasos para o despregamento:
+### Instrucciones para el Despliegue:
 
-1. **Construír a imaxe de Docker:**
-   Abre a terminal na carpeta raíz do proxecto e executa o seguinte comando para crear a imaxe da web:
+1. **Construir la imagen de Docker:**
+   Abre una terminal o consola de comandos en la carpeta raíz del proyecto (donde se ubica el archivo `Dockerfile`) y ejecuta el siguiente comando para compilar la imagen:
    ```bash
    docker build -t barberia-leolan:latest .
-Arrincar o contedor:
-Una vez creada a imaxe, executa este comando para levantar o servidor en local:
-
-Bash
+Arrancar el contenedor:
+Una vez que la imagen se haya construido correctamente, inicia el contenedor asociando el puerto local 8080 al puerto web interno del contenedor:
+ ```bash
 docker run -d -p 8080:80 --name web-barberia barberia-leolan:latest
-Probar a web:
-Abre o teu navegador e entra en http://localhost:8080. Xa poderás ver e testear a web da barbería correndo no teu propio PC.
+```
+Verificar el funcionamiento:
+Abre cualquier navegador web y accede a la dirección **http://localhost:8080**. El sitio web de la barbería ya estará corriendo localmente de forma totalmente aislada.
 
-Deter o servidor:
-Cando remates de facer probas, podes parar o contedor con:
-
-Bash
+Detener el servicio:
+Cuando finalicen las pruebas, puedes apagar y retirar el contenedor ejecutando:
+ ```bash
 docker stop web-barberia
+```
